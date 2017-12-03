@@ -1,0 +1,3 @@
+frontend/
+temperature-sensor/app/**/*.test.js
+temperature-sensor/app/test/
