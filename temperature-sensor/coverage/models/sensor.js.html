@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for models/sensor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">models</a> sensor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.15% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>26/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Sensor Class
+ * TODO: Create sensors that are proven to work in temperatures below 0 degrees.
+ *
+ * It will emulate a real sensor that has a ideal limits that are configured.
+ * It's possible to create a sensor that will never vary by assigning a 0% variance likelihood
+ *  and/or 0% variance range.
+ * On the other hand will can create a hectic scenarion with a very wild sensor that will
+ *  vary 100% of the times with up to 100% variance as well.
+ */
+class Sensor {
+  /**
+   * Sensor class constructor
+   * @param id - Sensor Id
+   * @param minIdealTemperature - The minimum temperature that is considered to be ideal
+   * @param maxIdealTemperature - The maximium temperature that is considered to be ideal
+   * @param varianceLikelihood = % of likelihood that the temperature will vary. Between 0 and 1
+   * @param varianceRange
+   */
+  constructor({
+    id,
+    minIdealTemperature,
+    maxIdealTemperature,
+    varianceLikelihood,
+    varianceRange,
+  }) {
+    // Number.isNan won't work in this cases
+    if ((typeof id !== 'number') || id &lt;= 0) {
+      throw new Error('Invalid id');
+    }
+&nbsp;
+    if ((typeof varianceLikelihood !== 'number') || varianceLikelihood &lt; 0 || varianceLikelihood &gt; 1) {
+      throw new Error('Invalid variance likelihood');
+    }
+&nbsp;
+    if ((typeof varianceRange !== 'number') || varianceRange &lt; 0 || varianceRange &gt; 1) {
+      throw new Error('Invalid variance range');
+    }
+&nbsp;
+    if ((typeof minIdealTemperature !== 'number') || minIdealTemperature &lt;= 0) {
+      throw new Error('Invalid minimum temperature');
+    }
+&nbsp;
+    if ((typeof maxIdealTemperature !== 'number') || maxIdealTemperature &lt;= 0) {
+      throw new Error('Invalid max temperature');
+    }
+&nbsp;
+    if (maxIdealTemperature &lt; minIdealTemperature) {
+      throw new Error('Invalid combination of min and max temperature');
+    }
+    this.id = id;
+    this.minIdealTemperature = minIdealTemperature;
+    this.maxIdealTemperature = maxIdealTemperature;
+    this.varianceLikelihood = varianceLikelihood;
+    this.varianceRange = varianceRange;
+    this.initTemperature();
+  }
+&nbsp;
+  /**
+   * Sets the initial value of the temperature measured in the sensor.
+   * The initial value will be between the min and max (exclusive) temperatures.
+   * Example:
+   *  Minimum ideal temperature -&gt; 3 degrees
+   *  Maximum ideal temperature -&gt; 5 degrees
+   *
+   *  ==&gt; Initial temperature in between 3 and 4.99...
+   */
+  initTemperature() {
+    this.temperature =
+      (Math.random() * (this.maxIdealTemperature - this.minIdealTemperature)) +
+        this.minIdealTemperature;
+  }
+&nbsp;
+  /**
+   * Sets the new measured temperature taking into consideration its current value,
+   *  the variance likelihood and the variance range.
+   *  Example:
+   *    Current temperature: 3.5 degrees
+   *    Variance Likelihood: 80%
+   *    Variange Range: 10%
+   *
+   *    There is 80% chance that the current value will change.
+   *    If that occurs, then the temperature will vary within the variance range.
+   *    Following the example, the new value would be between 2.7 and 3.3 (10% variance)
+   */
+  setTemperature() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.varianceLikelihood &gt;= (1 - Math.random())) {
+      // The temperature will change...
+      const minNewValue = this.temperature * (1 - this.varianceRange);
+      const maxNewValue = this.temperature * (1 + this.varianceRange);
+&nbsp;
+      this.temperature = (Math.random() * (maxNewValue - minNewValue)) + minNewValue;
+    }
+  }
+&nbsp;
+  /**
+   * In order to emulate a sensor, all the time the temperature is retrieved
+   *  it will have a possibility to change the current value.
+   * After calculating the new value, it will round up to 2 digits after the decimal place.
+   * @returns {string}
+   */
+  getTemperature() {
+    this.setTemperature();
+    return Number(this.temperature).toFixed(2);
+  }
+}
+&nbsp;
+module.exports = Sensor;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 04 2017 21:18:13 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

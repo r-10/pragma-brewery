@@ -1,0 +1,14 @@
+<div class="container">
+  <h3 class="mat-h3 page-title">My Journeys</h3>
+  <mat-list class="journey-list">
+    <mat-list-item *ngFor="let journey of journeys">
+      <mat-icon>check</mat-icon>
+      <span class="journey-date">{{ journey.startDate | date: 'EEEE, MMMM d' }}</span>
+    </mat-list-item>
+  </mat-list>
+  <div class="add-journey-container">
+    <button mat-fab color="accent" (click)="startJourney()">
+      <mat-icon class="md-24" aria-label="Start New Journey">add</mat-icon>
+    </button>
+  </div>
+</div>

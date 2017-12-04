@@ -1,0 +1,103 @@
+.bottom-bar {
+  justify-content: center;
+  margin-top: 0.3em;
+}
+
+.error-msg {
+  padding: 0px 1.5em 0.5em 1.5em;
+}
+
+.title {
+  margin-left: 0.5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.end-journey-btn {
+  width: 100%;
+  min-height: 3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.sensor-tile {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  &.ok {
+    background-color: #26a69a;
+    .tile-title {
+      height: 25%;
+      width: 100%;
+      font-size: 16px;
+      background-color: #00796b;
+    }
+    .temperature {
+      height: 55%;
+      width: 100%;
+      text-align: center;
+      padding-top: 3em;
+      font-size: 24px;
+    }
+    .temperature-bottom-bar {
+      height: 20%;
+      width: 100%;
+      background-color: #004c40;
+      font-size: 12px;
+    }
+  }
+
+  &.warning {
+    background-color: #ffca28;
+    .tile-title {
+      height: 25%;
+      width: 100%;
+      background-color: #ffa000;
+      font-size: 16px;
+    }
+    .temperature {
+      height: 55%;
+      width: 100%;
+      text-align: center;
+      padding-top: 3em;
+      font-size: 24px;
+    }
+    .temperature-bottom-bar {
+      height: 20%;
+      width: 100%;
+      background-color: #c67100;
+      font-size: 12px;
+    }
+  }
+
+  &.endangered {
+    background-color: #ef5350;
+
+    .tile-title {
+      height: 25%;
+      width: 100%;
+      background-color: #d32f2f;
+      text-align: center;
+      font-size: 16px;
+    }
+    .temperature {
+      height: 55%;
+      width: 100%;
+      text-align: center;
+      padding-top: 3em;
+      font-size: 24px;
+    }
+    .temperature-bottom-bar {
+      height: 20%;
+      width: 100%;
+      background-color: #9a0007;
+      font-size: 12px;
+    }
+  }
+
+}

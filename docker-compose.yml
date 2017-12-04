@@ -1,0 +1,18 @@
+version: '2'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    links:
+      - temperature-sensor
+    depends_on:
+     - "temperature-sensor"
+    ports:
+     - "4200:4200"
+  temperature-sensor:
+    build:
+      context: ./temperature-sensor
+      dockerfile: Dockerfile
+    ports:
+     - "3000:3000"

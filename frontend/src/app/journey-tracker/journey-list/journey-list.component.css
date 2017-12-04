@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-date {
+  margin-left: 0.3em;
+}
+
+.page-title {
+  padding-top: 0.5em;
+  padding-left: 1em;
+  margin-bottom: 0px;
+}
+
+.journey-list {
+  padding-left: 1em;
+}
+
+.add-journey-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 1em;
+}

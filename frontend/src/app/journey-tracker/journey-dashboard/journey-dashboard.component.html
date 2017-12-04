@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-grid-list cols="2" rowHeight="1:1" gutterSize="4" *ngIf="activeJourney">
+    <mat-grid-tile *ngFor="let log of activeJourney.logRecord" class="sensor-tile" [ngClass]="log.status">
+      <mat-grid-tile-header class="tile-title">{{ log.title }}</mat-grid-tile-header>
+      <div class="temperature">
+        {{ log.currentTemperature }}º
+      </div>
+      <mat-grid-tile-footer class="temperature-bottom-bar">
+        Min: {{ log.minIdealTemperature }}º - Max: {{ log.maxIdealTemperature }}º
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="error-msg">
+    <p *ngIf="!activeJourney">It seems like this journey does not exist or is not active anymore.</p>
+  </div>
+  <mat-toolbar class="bottom-bar">
+    <button mat-raised-button class="end-journey-btn" color="warn" (click)="endActiveJourney()">{{ buttonTxt }}</button>
+  </mat-toolbar>
+
+</div>
