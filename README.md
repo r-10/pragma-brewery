@@ -168,7 +168,7 @@ his expectations on what needs to be achieved with this solution. The questions 
 * It has been planned in phases: at first, it accomplishes its purpose by solving the problem in question.
   Furthermore, it proposes a ground breaking change in the process (check [Future release](#future-release)).
   The solution is not limited to tackle solely what has been requested.
-  The problem faced was thoroughly analysed in order to come up with 
+* The way the sensors are emulated is savvy.
 
 
 ## Coming soon (v2.0)
@@ -191,7 +191,11 @@ The reason is to leverage what a PWA has to offer:
 
 
 ### Increase Test Automation Coverage
+The sensor controller (NodeJS) has been developed with a TDD approach, having 100% unit tests coverage in core functionalities.
+However, frontend has only basic unit tests that don't cover the core functionality.
+
 Create integration tests with sensor controller.
+
 Create end to end tests for the dashboard.
 
 
